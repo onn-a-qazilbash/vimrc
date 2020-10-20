@@ -14,14 +14,15 @@ set title
 set colorcolumn=80
 
 call plug#begin('~/.vim/plugged')
-
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tomasiser/vim-code-dark'
 Plug 'kylelaker/riscv.vim'
 Plug 'itchyny/lightline.vim'
 call plug#end()
 
 let g:coc_disable_startup_warning = 1
-
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 colorscheme codedark
 set noshowmode
