@@ -17,6 +17,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tomasiser/vim-code-dark'
 Plug 'kylelaker/riscv.vim'
+Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
 call plug#end()
 
