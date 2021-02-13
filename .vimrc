@@ -10,10 +10,16 @@ set nowrap
 set smartcase
 set incsearch
 set title
-
+set noshowmode
+set laststatus=2
+set relativenumber
 set colorcolumn=80
+set background=dark
+set noswapfile
 
 call plug#begin('~/.vim/plugged')
+Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'gruvbox-community/gruvbox'
 Plug 'arzg/vim-substrata'
 Plug 'lervag/vimtex'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -29,22 +35,11 @@ let g:coc_disable_startup_warning = 1
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-"colorscheme nord
-"set t_Co=256
-"set background=dark
-"colorscheme iceberg
-"colorscheme fogbell_light
-"highlight Normal ctermbg=NONE
-"highlight nonText ctermbg=NONE
-"colorscheme gotham256
-"colorscheme codedark
 let g:lightline = {
-      \ 'colorscheme': 'seoul256',
+      \ 'colorscheme': 'gruvbox',
       \ }
-colorscheme substrata
-set noshowmode
-set laststatus=2
-set relativenumber
+
+colorscheme gruvbox
 highlight clear LineNr 
 highlight clear SignColumn  
 highlight clear ColorColumn
